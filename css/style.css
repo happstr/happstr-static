@@ -1,0 +1,858 @@
+/**
+ * CSS reset
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  position: relative;
+  top: 0px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*.clear{
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+a, a:link, a:hover, a:active, a:visited{
+  outline: none !important;
+}
+
+@font-face {
+  font-family: 'londrina';
+  src: url('/fonts/londrinasolid-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/londrinasolid-regular-webfont.woff') format('woff'),
+       url('/fonts/londrinasolid-regular-webfont.ttf')  format('truetype'),
+       url('/fonts/londrinasolid-regular-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'BentonSans';
+  src: url('/fonts/BentonSans-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Freehand575';
+  src: url('/fonts/208F23_0_0.eot'),
+       url('/fonts/208F23_0_0.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/208F23_0_0.woff') format('woff'),
+       url('/fonts/208F23_0_0.ttf') format('truetype');
+       }
+
+
+/**************************************************************************
+* BEGIN REUSABLE STYLES
+*/
+
+body {
+    font-size: 100%;
+    font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.clear {clear:both;}
+
+.fl-left {float:left;}
+
+.fl-right {float:right;}
+
+.small-blue {
+  font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:12px;
+  line-height:18px;
+  color:#25AAE2;
+}
+
+#page-wrapper #content-wrapper ul.pages li.about p.scripty {
+  font-family: 'Freehand575', Georgia, serif;
+  font-size:48px;
+  line-height:64px;
+  color:#DF55A0;
+}
+
+#page-wrapper #content-wrapper ul.pages li.about p.scripty-small {
+  font-family: 'Freehand575', Georgia, serif;
+  font-size:28px;
+  line-height:44px;
+  color:#DF55A0;
+}
+
+a.blue-link:link, a.blue-link:active, a.blue-link:visited, a.blue-link:hover {
+  color:#25AAE2;
+}
+
+
+/**************************************************************************
+* BEGIN WRAPPER STYLES
+*/
+
+#page-wrapper {
+    width:100%;
+    margin: 0 auto;
+}
+
+#nav-fix {
+       height:153px;
+   }
+
+#page-wrapper #nav-wrapper {
+    width:100%;
+   /* height:153px;
+    padding-top:10px;*/
+    border-bottom:5px solid #ffde15;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:1200;
+    background:#FFF;
+}
+
+#page-wrapper #nav-wrapper #logo-wrapper {
+    height:86px;
+    width:100%;
+}
+
+a.logo {
+    background: url(../img/logo.jpg) top center no-repeat;
+    width:92px;
+    height:86px;
+    display:block;
+    margin: 0 auto;
+}
+
+#page-wrapper #nav-wrapper #rule {
+    width:200px;
+    background: #d7eef4;
+    margin:0 auto;
+    display:block;
+    height:1px;
+    margin-top:10px;
+}
+
+#page-wrapper #nav-wrapper #button-wrapper {
+    width:100%;
+    /*background-color:#000;*/
+}
+
+#page-wrapper #nav-wrapper #button-wrapper ul.buttons-main {
+    width:400px;
+    /*background-color:#d402c8;*/
+    margin:10px auto;
+    padding: 10px 0;
+}
+
+#page-wrapper #nav-wrapper #button-wrapper ul.buttons-main li {
+    width:200px;
+    float:left;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+a.nav-link:link, a.nav-link:active, a.nav-link:visited, a.nav-link:hover {
+    font-size:1.25em;
+    color:#df55a0;
+    text-decoration:none;
+    padding:10px;
+    margin:5px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.active, ul.buttons-main li a.nav-link:hover {
+     background-color:#fbebee;
+}
+
+#page-wrapper #content-wrapper {
+    width:100%;
+    overflow: hidden;
+    position:relative;
+    height:430px;
+   /* background:#bfedeb;*/
+}
+
+#page-wrapper #content-wrapper ul.pages {
+    height:430px;
+    left:0px;
+    position:relative;
+    width:30000px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.frames {
+    width:100%;
+    height:900px;
+    overflow: hidden;
+    float:left;
+}
+
+/*main center div for web*/
+
+div.center {
+    /*width:976px;*/
+    margin: 0 auto;
+}
+
+/**************************************************************************
+* BEGIN I'M HAPPY STYLES
+*/
+#page-wrapper #content-wrapper ul.pages li.im-happy {
+   height:430px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy #retain {
+    width:70%;
+    margin: 0 auto;
+    margin-top:20px;
+    text-align: center;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy h2 {
+    color:#25aae2;
+    font-size:90px;
+    font-family: 'londrina', helvetica, sans-serif;
+    line-height:95px;
+    margin-bottom:10px;
+}
+
+a.send-happy {
+    height:177px;
+    width:178px;
+    background: url(../img/happstr_button_sprite_178.jpg) no-repeat;
+    display:block;
+    margin: 0 auto;
+    background-position: 0 -174px;
+}
+
+a.send-happy:hover {
+    background-position: 0 1;
+}
+
+
+
+#page-wrapper #content-wrapper ul.pages li.im-happy span {
+    font-size:120px;
+    font-family: 'londrina', helvetica, sans-serif;
+}
+
+
+/**************************************************************************
+* BEGIN I'M HAPPY STEP TWO
+*/
+#page-wrapper #content-wrapper ul.pages li.im-happy-two {
+   height:430px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two #top-content {
+    height:300px;
+    border-bottom: solid 3px #2bb673;
+    width:100%;
+    position:relative;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two #top-content #social-bar {
+    width:100%;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background:#ebf6f9;
+    height:50px;
+    text-align:center;
+    font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#000;
+    padding-top:20px;
+    font-size:20px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two #top-content #social-bar .icon {
+    display:inline;
+    margin-bottom:-3px;
+}
+
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two #retain {
+    width:400px;
+    margin: 0 auto;
+    margin-top:20px;
+    text-align:left;
+    text-align:center;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because {
+    width:385px;
+    -moz-border-radius: 10px;
+     border-radius: 10px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.input {
+    float:left;
+    height:45px;
+    width:295px;
+    background: url(../img/input_background.jpg) top left no-repeat;
+    padding-left:5px;
+    padding-top:8px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.input .happy-input {
+    width:300px;
+    color:#333333;
+    height:35px;
+    width:280px;
+    background-color:#feffe8;
+    font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:14px;
+    border:none;
+    border:0px;
+    margin-bottom:20px;
+}
+f
+#page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.input #do-again {
+    width:100%;
+    text-align:center;
+
+}
+
+a.do-again-link:link, a.do-again-link:active, a.do-again-link:visited, a.do-again-link:hover {
+    font-size:22px;
+    color:#25aae2;
+    font-style:italic;
+    display:block;
+    margin-top:20px;
+
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.go-button {
+    float:left;
+    height:35px;
+}
+
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li img.go {
+    margin-top:-4px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two h2 {
+    color:#2bb673;
+    font-size:35px;
+    font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height:95px;
+    font-weight:normal;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two span {
+    font-size:120px;
+    font-family: 'londrina', helvetica, sans-serif;
+}
+
+/*being happy submit success page*/
+div.because-success {
+    display:none;
+}
+
+#page-wrapper #content-wrapper ul.pages li.im-happy-two div.because-success h2 {
+    color:#fcb040;
+    font-size:60px;
+    font-family: 'londrina', helvetica, sans-serif;
+    line-height:60px;
+    margin-bottom:10px;
+}
+
+/**************************************************************************
+* BEGIN ABOUT STYLES
+*/
+
+#page-wrapper #content-wrapper ul.pages li.about {
+   height:1050px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.about #frame {
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+}
+
+#page-wrapper #content-wrapper ul.pages li.about h2 {
+     color:#25aae2;
+     font-size:50px;
+     font-family: 'londrina', helvetica, sans-serif;
+     line-height:50px;
+     margin-bottom:20px;
+     margin-top:40px;
+     text-transform: uppercase;
+ }
+
+#page-wrapper #content-wrapper ul.pages li.about p {
+     font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size:14px;
+     color:#999;
+     line-height:20px;
+     margin-bottom:10px;
+}
+
+.photo-wrap{
+  float:left;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #f2f2f2;
+  width: 200px;
+  text-align: left;
+}
+
+.photo-wrap a{
+    text-decoration: none;
+}
+
+.teamster{
+  display:block;
+  font-size:16px;
+  color:#DF55A0;
+}
+
+/**************************************************************************
+* BEGIN I'M MAP STYLES
+*/
+#page-wrapper #content-wrapper ul.pages li.map {
+
+}
+
+#page-wrapper #content-wrapper ul.pages li.map #retain {
+    width:100%;
+}
+
+
+/**************************************************************************
+* BEGIN FOOTER STYLES
+*/
+
+#footer-wrapper {
+    height:145px;
+    border-top:3px solid #ffde15;
+    width:100%;
+
+}
+
+#footer-wrapper ul.footer {
+    width:250px;
+    margin: 0 auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    height:100px;
+}
+
+#footer-wrapper ul.footer li {
+    float:left;
+    padding-top:5px;
+    padding-bottom:5px;
+    width:250px;
+    text-align:center;
+}
+
+a.footer-link:link, a.footer-link:active, a.footer-link:visited, a.footer-link:hover {
+    color:#25aae2;
+    font-size:14px;
+    text-decoration:none;
+    width:220px;
+    display:block;
+    padding-bottom:10px;
+    text-align:center;
+    margin:0 auto;
+    font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a.find-happy-place {
+    width:250px;
+    font-family: 'Freehand575', Georgia, serif;
+    font-size:40px;
+    line-height:44px;
+    color:#DF55A0;
+    display:block;
+    border-bottom: solid 1px #D7EEF4;
+    padding-bottom:5px;
+    text-decoration: none;
+}
+
+.link-border {
+border-bottom: solid 1px #D7EEF4;
+}
+
+
+
+/**************************************************************************
+* BEGIN MAP STYLES
+*/
+
+#page-wrapper #content-wrapper ul.pages li.map-holder {
+    height:411px;
+}
+
+#page-wrapper #content-wrapper ul.pages li.map-holder #map {
+    height:430px;
+    width:100%;
+    background-color:#000;
+}
+
+/**************************************************************************
+* BEGIN MEDIA QUERIES
+*/
+
+@media screen and (max-device-width: 500px) {
+    /*body{
+        padding-top:130px;
+    }*/
+
+    #nav-fix {
+        height:135px;
+    }
+
+    #page-wrapper #nav-wrapper {
+        width:100%;
+        height:130px;
+        padding-top:5px;
+        border-bottom:3px solid #ffde15;
+        position:absolute;
+        top:0px;
+        left:0px;
+    }
+
+    #page-wrapper #nav-wrapper #logo-wrapper {
+        height:90px;
+        width:100%;
+        background: url(../img/logo.jpg) top center no-repeat;
+    }
+
+    #page-wrapper #nav-wrapper #rule {
+        width:400px;
+        background: #d7eef4;
+        margin:0 auto;
+        display:block;
+        height:1px;
+        margin-top:10px;
+    }
+
+    #page-wrapper #nav-wrapper #button-wrapper {
+        height:30px;
+        width:100%;
+        padding-top:5px;
+        /*background-color:#000;*/
+    }
+
+    #page-wrapper #nav-wrapper #button-wrapper ul.buttons-main {
+        width:300px;
+        height:25px;
+       /* background-color:#d402c8;*/
+        margin:0 auto;
+        padding-top:0px;
+    }
+
+    #page-wrapper #nav-wrapper #button-wrapper ul.buttons-main li {
+        width:150px;
+        float:left;
+        text-align:center;
+    }
+
+    a.nav-link:link, a.nav-link:active, a.nav-link:visited, a.nav-link:hover {
+        margin:0px;
+        font-size:16px;
+        color:#df55a0;
+        text-decoration:none;
+        padding-left:8px;
+        padding-right:8px;
+        padding-top:3px;
+        padding-bottom:2px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+
+    #page-wrapper #content-wrapper {
+        width:100%;
+        overflow: hidden;
+        position:relative;
+        height:270px;
+       /* background:#bfedeb;*/
+    }
+
+    #page-wrapper #content-wrapper ul.pages {
+        height:270px;
+        left:0px;
+        position:relative;
+        width:30000px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.frames {
+        width:100%;
+        height:900px;
+        overflow: hidden;
+        float:left;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy {
+        height:270px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy #retain {
+        margin: 0 auto;
+        margin-top:20px;
+        text-align: center;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy h2 {
+        color:#25aae2;
+        font-size:50px;
+        font-family: 'londrina', helvetica, sans-serif;
+        line-height:50px;
+        margin-bottom:10px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy span {
+        font-size:60px;
+        font-family: 'londrina', helvetica, sans-serif;
+    }
+
+    a.send-happy {
+        height:119px;
+        width:119px;
+        background: url(../img/happstr_button_sprite_119.jpg) no-repeat;
+        background-position: 0 -118px;
+        display:block;
+        margin: 0 auto;
+    }
+
+    a.send-happy:hover {
+        background-position: 0 1;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two {
+        height:400px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two #top-content {
+        height:190px;
+        border-bottom: solid 3px #2bb673;
+        width:100%;
+        position:relative;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two #top-content #social-bar {
+        width:100%;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        background:#ebf6f9;
+        height:47px;
+        text-align:center;
+        font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:#000;
+        padding-top:20px;
+        font-size:20px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two #top-content #social-bar .icon {
+        display:inline;
+        margin-bottom:-3px;
+    }
+
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two #retain {
+        width:300px;
+        margin: 0 auto;
+        margin-top:10px;
+        text-align:left;
+        height:400px;
+        /*background:#000;*/
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because {
+        width:300px;
+       /* background:#000;*/
+        height:50px;
+        margin-top:8px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.input {
+        float:left;
+        height:45px;
+        width:245px;
+        background: url(../img/mobile_input_background.jpg) top left no-repeat;
+        /*background:#ccc;*/
+        padding-left:5px;
+        padding-top:8px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.input .happy-input {
+        color:#333333;
+        height:35px;
+        width:225px;
+        background-color:#feffe8;
+        font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size:14px;
+        border:none;
+        border:0px;
+        margin-bottom:20px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.input #do-again {
+        width:100%;
+        text-align:center;
+    }
+
+    a.do-again-link:link, a.do-again-link:active, a.do-again-link:visited, a.do-again-link:hover {
+        font-size:18px;
+        color:#25aae2;
+        font-style:italic;
+        text-align:center;
+        margin-top:5px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li.go-button {
+        float:left;
+        height:35px;
+        width:40px;
+       /* background:#ddd;*/
+        margin-left:5px;
+
+    }
+
+
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two ul.input-because li img.go {
+        /*margin-top:-4px;*/
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two h2 {
+        color:#2bb673;
+        font-size:23px;
+        font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        line-height:25px;
+        font-weight:normal;
+        margin-top:10px;
+        margin-bottom:10px;
+        padding:0;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two span {
+        font-size:120px;
+        font-family: 'londrina', helvetica, sans-serif;
+    }
+
+    /*being happy submit success page*/
+    div.because-success {
+        display:none;
+        text-align:center;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.im-happy-two div.because-success h2 {
+        color:#fcb040;
+        font-size:37px;
+        font-family: 'londrina', helvetica, sans-serif;
+        line-height:40px;
+        margin-bottom:10px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.about {
+       height:2460px;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.about #frame {
+        width:300px;
+        margin:0 auto;
+        text-align:center;
+    }
+
+    #page-wrapper #content-wrapper ul.pages li.about h2 {
+         color:#25aae2;
+         font-size:50px;
+         font-family: 'londrina', helvetica, sans-serif;
+         line-height:50px;
+         margin-bottom:20px;
+         margin-top:10px;
+     }
+
+    #page-wrapper #content-wrapper ul.pages li.about p {
+         font-family: 'BentonSans','Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         font-size:17px;
+         color:#CCC;
+         line-height:20px;
+    }
+    
+    .photo-wrap{
+      float:none;
+      margin: 0px;
+      padding: 5px;
+      border: 1px solid #f2f2f2;
+      width: 300px;
+      text-align: center;
+    }
+
+    .photo-wrap a{
+        text-decoration: none;
+    }
+
+    .teamster{
+      display:block;
+      font-size:16px;
+      color:#DF55A0;
+    }
+
+
+
+    #footer-wrapper ul.footer {
+        width:250px;
+        margin: 0 auto;
+        margin-top:10px;
+        margin-bottom:20px;
+        height:100px;
+    }
+
+}
+
+
+/***************
+* Hacks from Ricky... sorry
+*/
+.ui-loader {
+  display: none;
+}

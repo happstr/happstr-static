@@ -1,0 +1,181 @@
+<html>
+<title>Happstr</title>
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1.0; user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link rel="apple-touch-icon" href="img/happstr_apple_touch_icon.png" />
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduiCZ1KHR48T5zOIGMzrhK7teVckQrOo&sensor=true"></script>
+<script type="text/javascript" src="vendor/js/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" src="js/markerclusterer.js"></script>
+<script type="text/javascript" src="js/Happstr.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  Navigate.construct();
+  HappyProcess.construct();
+
+  $(window).orientationchange(function(event){
+
+    Navigate.globalSizeContent();
+    $('body, html').animate({scrollTop:0}, 'fast');
+
+  });
+});
+</script>
+<script type="text/javascript" src="vendor/js/jquery.mobile-1.0.1.min.js"></script>
+
+  <body>
+  <div id="fb-root"></div>
+  <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+    <div id="page-wrapper">
+    <div id="nav-fix"></div>
+    <div id="nav-wrapper"  data-role="header" data-position="fixed">
+      <a href="#" class="logo" onclick="Navigate.navigateTo(0); return false;"></a>
+      <div id="rule"></div>
+      <div id="button-wrapper">
+        <ul class="buttons-main">
+          <li><a href="#" class="nav-link active create-happy">Feeling Happy?</a></li>
+          <li><a href="#" class="nav-link find-happy">Find Happiness</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content-wrapper">
+      <ul class="pages">
+        <li class="im-happy frames" id="im-happy">
+          <div class="center">
+            <div id="retain">
+              <h2>FEELING<br /><span>HAPPY?</span></h2>
+              <a href="#" class="send-happy"></a>
+            </div>
+          </div>
+        </li>
+        <li class="im-happy-two frames" id="im-happy-two">
+          <div id="top-content">
+            <div class="center">
+              <div id="retain">
+                <div class="because-enter">
+                <h2>I'm happy because...</h2>
+                  <ul class="input-because">
+                    <li class="input">
+                      <input type="text" class="happy-input"/>
+
+
+                    </li>
+                    <li class="go-button"><a href="#" class="send-because"><img src="img/go_button.jpg" class="go"></a></li>
+                  </ul>
+                  <div class="clear"></div>
+                  <div id="do-again">
+                    <div id="input-wrapper"><a href="#" class="do-again-link">Do it again.</div></a>
+                  </div>
+                </div>
+                <div class="because-success" style="display:none;">
+                  <h2>DIDN'T THAT FEEL<br />GREAT?</h2>
+                  <div id="input-wrapper"><a href="#" class="do-again-link" >Do it again.</div></a>
+                </div>
+              </div>
+            </div>
+            <div id="social-bar">
+              Share the <img src="img/heart-icon.png" class="icon" style="position:relative; top:-4px;"/> on <a href="#" onclick="postToFeed(); return false;"><img src="img/facebook.png" class="icon"/></a> &amp; <a href="https://twitter.com/share?url=https%3A%2F%2Fhappstr.com" target="_blank"><img src="img/twitter.png" class="icon"/></a>
+            </div>
+          </div>
+        </li>
+            <li class="frames map">
+          <div id="retain">
+                    <div id="map_canvas" style="width:100%; height:100%"></div>
+          </div>
+            </li>
+        <li class="about frames">
+          <div class="center">
+            <div id="frame">
+              <h2>Tap-in to global happiness.</h2>
+
+<p>Happstr is about challenging yourself to tap-in every time you are happy, and share that happiness with your friends. Obviously, you're happier when your friends are happy (by about <strong>15%</strong>), but research shows that you're also <strong>10%</strong> happier when <em>their</em> friends are happy. Even crazier, a friend of a friend of a friend being happy increases your happiness by about <strong>6%</strong>. We aim to amplify world happiness by leveraging this network effect.</p>
+
+<p class="scripty">Feeling pretty good? Let others know.</p>
+
+<p>Happstr starts with a simple web app for you to keep track of your happiness. When you tap the happy button your elation gets tagged to a global map. Then discover the happiness around you and explore happy tap-ins around the world. </p>
+
+<p class="scripty-small">Find your happy place.</p>
+
+<p>Happstr was built in March 2012 on <a href="http://startupbus.com/americas/tribes/new-york" target="_blank" class="blue-link">TheStartupBus</a> from New York City to Austin.</p>
+
+<p>Meet the team:</p>
+
+<ul class="small-blue">
+  <li class="photo-wrap"><a href="http://www.twitter.com/pnts" target="_blank" class="blue-link"><img src="img/pnts.jpg" alt="pnts"><span class="teamster">Andrea Mignolo</span>@pnts</a></li>
+  <li class="photo-wrap"><a href="http://www.twitter.com/b9punk" target="_blank" class="blue-link"><img src="img/jen.jpg" alt="jen"><span class="teamster">jennifer gergen</span>@b9punk</a></li>
+  <li class="photo-wrap"><a href="http://www.twitter.com/freenerd" target="_blank" class="blue-link"><img src="img/johan.jpg" alt="johan"><span class="teamster">Johan Uhle</span>@freenerd</a></li>
+  <li class="photo-wrap"><a href="http://www.twitter.com/natecooper" target="_blank" class="blue-link"><img src="img/nate.jpg" alt="nate"><span class="teamster">Nate Cooper</span>@natecooper</a></li>
+  <li class="photo-wrap"><a href="http://www.twitter.com/rickyrobinett" target="_blank" class="blue-link"><img src="img/ricky.jpg" alt="ricky"><span class="teamster">Ricky Robinett</span>@rickyrobinett</a></li>
+  <li class="photo-wrap"><a href="http://www.twitter.com/RobHanleyDesign" target="_blank" class="blue-link"><img src="img/rob.jpg" alt="ro"><span class="teamster">Robert Hanley</span>@RobHanleyDesign</a></li>
+
+</ul>
+            </div>
+          </div>
+        <li>
+      </ul>
+    </div>
+    <div id="footer-wrapper">
+      <div class="center">
+        <ul class="footer">
+          <li><a href="#" class="find-happy-place">Find your happy place.</a></li>
+          <li><a href="#" class="footer-link link-border" onclick="Navigate.navigateTo(3); return false;">About Happstr</a></li>
+            <li ><a href="http://happstr.com" class="footer-link link-border"> Want more? Sign up for updates. </a></li>
+          <!--<li><a href="#" class="footer-link">Global Happiness Feed</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+        FB.init({appId: "392198554141811", status: true, cookie: true});
+
+        function postToFeed() {
+
+       var facebookString;
+         var happyString ='I am happy ';
+         var becauseString = $('.happy-input').val();
+
+         if(becauseString !== '') {
+             facebookString = happyString + 'because ' + becauseString;
+         } else {
+             facebookString = happyString;
+         }
+
+          // calling the API ...
+          var obj = {
+            method: 'feed',
+            link: 'https://www.hapster.com/prototype',
+            picture: 'http://www.hapstr.com/img/share_logo.jpg',
+            name: 'Happstr',
+            caption: 'Tap into your happiness with Happstr',
+            description: facebookString
+          };
+
+          function callback(response) {
+            document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+          }
+
+          FB.ui(obj, callback);
+        }
+      </script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29814421-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  </body>
+</html>
